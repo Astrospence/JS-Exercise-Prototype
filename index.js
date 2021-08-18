@@ -92,10 +92,32 @@ console.log(spencer.stomach);
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-function Car() {
-  
+function Car(model, milesPerGallon) {
+  this.model = model,
+  this.milesPerGallon = milesPerGallon,
+  this.tank = 0,
+  this.odometer = 0
 }
 
+Car.prototype.fill = function(gallons){
+  return this.tank = this.tank + gallons;
+}
+
+Car.prototype.drive = function(distance){
+  return this.odometer = `${this.odometer + distance} miles`;
+}
+
+const coupe = new Car('corvette', 20);
+const truck = new Car('F-150', 25);
+
+coupe.fill(12);
+coupe.drive(250);
+truck.fill(22);
+truck.drive(550);
+
+console.log('Task 2:');
+console.log(coupe);
+console.log(truck);
 
 /*
   TASK 3

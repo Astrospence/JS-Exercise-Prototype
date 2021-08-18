@@ -137,11 +137,11 @@ Baby.prototype.play = function(){
   return this.playtime = `Playing with ${this.favoriteToy}, ${this.favoriteToy} being the favorite toy.`;
 }
 
-const babyGirl = new Baby('Scarlett', 1, 'lightsabers');
+const babyGirl = new Baby('Scarlett', 2, 'lightsabers');
 babyGirl.play('lightsabers');
 
 babyGirl.eat('milk');
-babyGirl.eat('avocados');
+babyGirl.eat('pizza');
 
 babyGirl.poop();
 
@@ -152,10 +152,10 @@ console.log(babyGirl);
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Window Binding: When called in the global scope, "this" will refer to the window as a whole, and is usally an error. 
+  2. Implicit Binding: The most common rule, as a function is invoked, the value to the left of the . (dot) is what "this" refers to.
+  3. Explicit Binding: Using the keywords .call, .apply, or .bind, you can declare what "this" refers to manually.
+  4. New Binding: When using the "new" keyword while invoking a constructor function, "this" then refers to the new object that was just created.
 */
 
 
